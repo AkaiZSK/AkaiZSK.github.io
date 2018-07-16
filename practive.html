@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding-top: 56px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 500px;
+        }
+
+        .swiper-slide {
+            background-color: #888;
+        }
+
+        .img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background-color: #888;
+            margin: 0 auto;
+        }
+
+        .col-lg-4 {
+            text-align: center;
+        }
+
+        .divider {
+            margin: 5rem 0;
+
+        }
+
+        .featurette {
+            width: 100%;
+            height: 500px;
+            background-color: #888;
+        }
+
+        @media (min-width:1800px) {
+            .container {
+                max-width: 1600px;
+            }
+        }
+
+        .swiper-slife {
+            position: relative;
+        }
+
+        .swiper-slide>.container {
+            max-width: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            color: #fff;
+        }
+
+        .btn.btn-primary {
+            font-size: 24px;
+        }
+
+        .con2 h1,
+        .con2 p,
+        .con2 a {
+            text-align: center;
+        }
+
+        .con2 a {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .con3 h1,
+        .con3 p,
+        .con3 a {
+            text-align: right;
+        }
+
+        .con3 a {
+            position: absolute;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Carousel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid mb-5 p-0">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="container con1">
+                        <h1>Example headline.</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
+                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <a href="" class="btn btn-primary py-2 mb-5">Sign up today</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="container con2">
+                        <h1>Another example headline.</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
+                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <a href="" class="btn btn-primary py-2 mb-5 ">Learn more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="container con3">
+                        <h1>One more for good measure.</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
+                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <a href="" class=" btn btn-primary py-2 mb-5">Browse gallery</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>           
+    </div>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12 col-lg-4  mb-5">
+                <div class="img mb-2"></div>
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula
+                    ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                <a href="" class="btn btn-secondary">view details>></a>
+            </div>
+            <div class="col-md-12 col-lg-4 mb-5">
+                <div class="img mb-2"></div>
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula
+                    ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                <a href="" class="btn btn-secondary">view details>></a>
+            </div>
+            <div class="col-md-12 col-lg-4 mb-5">
+                <div class="img mb-2"></div>
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula
+                    ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                <a href="" class="btn btn-secondary">view details>></a>
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row align-items-center" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div class="col-lg-7  mb-5 col-12 ">
+                <h1>First featurette heading. It'll blow your mind.</h1>
+                <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
+                    commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-lg-5  col-12">
+                <div class="featurette mx-auto"></div>
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row align-items-center" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div class="col-lg-7 order-lg-2 mb-5  col-12 ">
+                <h1>Oh yeah, it's that good. See for yourself.</h1>
+                <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
+                    commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-lg-5 order-lg-1 col-12 ">
+                <div class="featurette mx-auto "></div>
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row align-items-center" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div class="col-lg-7 mb-5 col-12">
+                <h1>And lastly, this one. Checkmate.</h1>
+                <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
+                    commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+
+                </p>
+            </div>
+            <div class="col-lg-5 col-12">
+                <div class="featurette mx-auto "></div>
+            </div>
+        </div>
+        <hr class="divider">
+    </div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>
