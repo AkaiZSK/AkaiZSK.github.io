@@ -812,25 +812,12 @@ footer .icons{
     display: flex;
 }
 footer .icon{
-
-    margin-right: 20px;
-    
+    margin-right: 20px; 
 }
-footer i{
-    font-size: 35px ;
-    background-color: #fff;
-}
-.fa-facebook{
-    color: #3b5998;
-}
-.fa-twitter-square{
-    color: #1da1f2;
-}
-.fa-google-plus-square{
-    color: #dd4b39;
-}
-.copyright{
-    color: #fff;
+footer img{
+  width: 30px;
+  background-color: #fff;
+  border-radius:5px;
 }
 
 
