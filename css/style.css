@@ -484,23 +484,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-position: center;
+
+    position: relative;
 }
 
-.section4 .swiper-slide:nth-child(1) {
+.section4 .bgp1 {
     background-image: url("../img/history1.jpg");
 }
 
-.section4 .swiper-slide:nth-child(2) {
+.section4 .bgp2 {
     background-image: url("../img/history2.jpg");
 }
 
-.section4 .swiper-slide:nth-child(3) {
+.section4 .bgp3 {
     background-image: url("../img/history3.jpg");
 }
 
-.section4 .swiper-slide:nth-child(4) {
+.section4 .bgp4 {
     background-image: url("../img/history4.jpg");
 }
 
@@ -512,11 +512,18 @@ body {
 .section4 .swiper-slide .intro {
     color: rgba(255, 255, 255, .8);
 }
-
+.bgp{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
 .bg {
     width: 60%;
     padding: 0 20%;
     padding-top: 30%;
+    z-index: 5;
 }
 /* 拉麵 */
 
