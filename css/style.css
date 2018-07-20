@@ -1,0 +1,865 @@
+* {
+    font-family: 微軟正黑體, sans-serif;
+}
+body {
+    margin: 0;
+}
+
+/* 通用項目 */
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 48px;
+    color: #CC3635;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.intro {
+    font-size: 26px;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.subtitle {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section {
+    width: 100%;
+    padding: 75px 0;
+}
+
+/* 導覽列 */
+
+.nav {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    z-index: 5;
+    transition: .5s;
+    /* display: none; */
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .4s;
+}
+
+.nav span {
+    color: #ED1C24;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.menu li {
+    margin-left: 10px;
+    position: relative;
+}
+
+.menu .dash {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: .4s;
+}
+
+.nav a:hover {
+    color: #ED1C24;
+}
+
+.menu li:hover .dash {
+    width: 100%;
+    right: inherit;
+    background-color: #CC3635;
+    /* animation: menu-hover .4s both ease-in-out; */
+}
+
+.nav a:hover span {
+    color: #fff;
+}
+
+/* 首頁 */
+
+.home {
+    height: calc(100vh - 200px);
+    width: 100%;
+    background-color: #000;
+    background-image: url('../img/home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 200px;
+    overflow: hidden;
+}
+
+.home .home_title_full {
+    padding: 0 12%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.home .title {
+    top: 0;
+    width: 362px;
+    margin-bottom: 10px;
+}
+
+.home .slogn {
+    height: 36px;
+    margin-bottom: 10px;
+}
+
+.home .subtitle {
+    animation: home-move 1s .3s both;
+    margin-bottom: 220px;
+    margin-right: -0px;
+    width: 900px;
+}
+
+.flash {
+    animation: home-flash .5s 1s both;
+}
+
+.btn {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.home .start {
+    color: #fff;
+    text-align: center;
+    padding: 10px 30px;
+    border: 3px solid #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home .start span {
+    transition: .3s;
+}
+
+.home .start:hover {
+    background-color: #fff;
+    color: rgba(28, 36, 61, 1);
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.home .start:hover span {
+    box-shadow: 0 2px rgba(28, 36, 61, 1);
+}
+
+.home .arrow {
+    width: 44px;
+    height: 39px;
+    background-image: url('../img/arrow.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 calc(50% - 22px);
+    opacity: 0;
+    animation: arrow-down 2s 1.6s infinite both linear;
+}
+
+/* 四季 */
+
+.seasons {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+.season {
+    width: calc(50% - 40px/2);
+    margin-bottom: 40px;
+}
+
+.season .img_cover {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.season .img {
+    background-size: cover;
+    transform: scale(1.1);
+    width: 100%;
+    height: 280px;
+    transition: 0.5s;
+}
+
+.season .img_cover:hover .img {
+    transform: scale(1);
+}
+
+.season .img1 {
+    background-image: url('../img/season-haru.jpg');
+}
+
+.season .img2 {
+    background-image: url('../img/season-natsu.JPG');
+}
+
+.season .img3 {
+    background-image: url('../img/season-aki.jpg');
+}
+
+.season .img4 {
+    background-image: url('../img/season-fuyu.jpg');
+}
+
+.season span {
+    margin-left: 50px;
+}
+
+/* 祭典 */
+
+.section2 {
+    background-color: #F9F7F4;
+}
+
+.time_line {
+    width: 5px;
+    height: 350vh;
+    position: absolute;
+    background-color: #fff;
+}
+
+.fes {
+    height: 70vh;
+    margin-left: 40px;
+    position: relative;
+}
+
+.fes_name {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.fes_time {
+    font-size: 26px;
+    margin-left: -26px;
+}
+
+.fes_time::before {
+    content: "";
+    position: relative;
+    top: 3px;
+    left: -24px;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: #DE373D;
+    border-radius: 50%;
+}
+
+.fes_img_all {
+    position: absolute;
+    left: 185px;
+    top: 130px;
+}
+
+.fes_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 785px;
+    height: 410px;
+    background-color: #555;
+    z-index: 1;
+    transition: .3s;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fi1 {
+    background-image: url('../img/fes_hajime.jpg');
+}
+
+.fi2 {
+    background-image: url('../img/fes_sakura.jpg');
+}
+
+.fi3 {
+    background-image: url('../img/fes_mitsusya.jpg');
+}
+
+.fi4 {
+    background-image: url('../img/fes_hanabi.jpg');
+}
+
+.fi5 {
+    background-image: url('../img/fes_meiji.jpg');
+}
+
+.fes_bg {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    width: 785px;
+    height: 410px;
+    background-color: #E09294;
+    transition: .5s;
+}
+
+.fes_intro {
+    font-size: 26px;
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 80%;
+}
+
+.fes_img_all:hover .fes_img {
+    left: 40px;
+    top: 40px;
+    z-index: 0;
+}
+
+.fes_img_all:hover .fes_bg {
+    left: 0px;
+    top: 0px;
+    background-color: rgba(224, 146, 148, 0.8);
+}
+
+/* 橫丁 */
+
+.yoko {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.yoko_card {
+    width: 254px;
+    height: 335px;
+    background-color: lightslategray;
+    transition: .5s;
+    background-size: cover;
+    cursor: pointer;
+}
+.yoko_card .cover{
+    width: 100%;    
+    height: 100%;
+    background-color: rgb(49, 3, 3);
+    opacity: 0;
+    float: left;
+    transition: 10s;
+}
+.yoko_card:hover .cover{
+    opacity: 0.8;
+   
+}
+.yoko_card:nth-child(1) {
+    background-image: url("../img/yoko1.jpg");
+}
+
+.yoko_card:nth-child(2) {
+    background-image: url("../img/yoko2.jpg");
+}
+
+.yoko_card:nth-child(3) {
+    background-image: url("../img/yoko3.jpg");
+}
+
+.yoko_card:nth-child(4) {
+    background-image: url("../img/yoko4.jpg");
+}
+
+.yoko_intro {
+    padding-left: 120%;
+    padding-top: 50px;
+    width: 0px;
+    /* overflow: hidden; */
+    display: none;
+    text-align: left;
+}
+
+.yoko>.text {
+    width: 800px;
+}
+
+.yoko_intro.open {
+    display: block;
+    width: 700px;
+}
+
+/* 點擊觸發動作 */
+
+.yoko_card:nth-child(1).slide-left {
+    transform: translate(-245px, 0);
+    pointer-events: none;
+    z-index: -2;
+}
+
+.yoko_card:nth-child(1).slide-mid {
+    transform: translate(50px, 0);
+}
+
+.yoko_card:nth-child(2).slide-mid {
+    transform: translate(-250px, 0);
+}
+
+.yoko_card:nth-child(2).slide-left {
+    transform: translate(-530px, 0) scale(.99);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.yoko_card:nth-child(2).slide-right {
+    transform: translate(825px, 0) scale(.98);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.yoko_card:nth-child(3).slide-left {
+    transform: translate(-815px, 0) scale(.98);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.yoko_card:nth-child(3).slide-mid {
+    transform: translate(-550px, 0);
+}
+
+.yoko_card:nth-child(3).slide-right {
+    transform: translate(535px, 0) scale(.99);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.yoko_card:nth-child(4).slide-mid {
+    transform: translate(-840px, 0);
+}
+
+.yoko_card:nth-child(4).slide-right {
+    transform: translate(250px, 0);
+    pointer-events: none;
+}
+
+/* 古蹟 */
+
+.section4 .swiper-container {
+    width: 100%;
+    height: 850px;
+}
+
+.section4 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.section4 .swiper-slide:nth-child(1) {
+    background-image: url("../img/history1.jpg");
+}
+
+.section4 .swiper-slide:nth-child(2) {
+    background-image: url("../img/history2.jpg");
+}
+
+.section4 .swiper-slide:nth-child(3) {
+    background-image: url("../img/history3.jpg");
+}
+
+.section4 .swiper-slide:nth-child(4) {
+    background-image: url("../img/history4.jpg");
+}
+
+.section4 .swiper-slide .subtitle {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.section4 .swiper-slide .intro {
+    color: rgba(255, 255, 255, .8);
+}
+
+.bg {
+    width: 60%;
+    padding: 0 20%;
+    padding-top: 30%;
+}
+/* 拉麵 */
+
+.ramen {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ramen_card {
+    width: 32%;
+}
+
+.ramen_card .img {
+    width: 100%;
+    height: 289px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.ramen_card .subtitle {
+    margin-bottom: 20px;
+}
+
+.ramen_card .intro {
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, .8);
+}
+
+.ramen_card:nth-child(1) .img {
+    background-image: url('../img/ramen1.jpg');
+}
+
+.ramen_card:nth-child(2) .img {
+    background-image: url('../img/ramen2.jpg');
+}
+
+.ramen_card:nth-child(3) .img {
+    background-image: url('../img/ramen3.jpg');
+}
+
+.ramen p {
+    text-align: center;
+}
+
+.ramen .shop {
+    font-size: 16px;
+    color: #fff;
+    background-color: #ED1C24;
+    text-decoration: none;
+    padding: 5px 20px;
+}
+
+.ramen span {
+    margin-right: 10px;
+}
+/* 鄉土料理 */
+.section6 .full_area{
+    height: 594px;
+    width: 100%;
+    display: flex;
+    margin-top: 80px;
+}
+.trad_img{
+    position: relative;
+    width: 55%;
+    max-width: 900px;
+    height: 100%;
+    overflow: hidden;
+}
+.trad_img img{
+    width: 100%;
+}
+.trad_swiper{
+    width:100%;
+    height: 650px;
+}
+.trad_swiper .swiper-pagination{
+    top: 90% !important;
+}
+.trad_swiper .swiper-slide{
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.trad_swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #CC3635;
+}
+.trad_text{
+    flex-grow: 1;
+    height: 100%;
+
+}
+.trad_text .text_area{
+    margin: 0 auto;
+    width: 380px;
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.trad_title{
+    width: 110px;
+    height: auto;
+
+}
+.trad_line{
+    height: 3px;
+    width: 100%;
+    background-color: #b2b2b2;
+    margin: 40px 0;
+}
+.trad_text .intro{
+    color: #666;
+    text-align: left;
+}
+.reverse{
+    flex-direction: row-reverse;
+}
+.trad_btn{
+    width: 100%;
+    text-align: center;
+    border: 2px solid #eee;
+    display: block;
+    color: #CC3635;
+    text-decoration: none;
+    padding: 5px 0;
+    font-weight: bold;
+}
+.trad_btn:hover img{
+    transform: translateX(20px);
+}
+.trad_btn img{
+    margin-left: 50px; 
+    transition: .4s;   
+}
+/* 甜點 */
+.section7{
+    background: #F9F7F4;
+}
+.section7 .container{
+    display: flex;
+    justify-content: space-between;
+}
+.section7 .column{
+    width: 510px;
+    display: flex;
+    flex-direction: column;
+}
+.section7 .row{
+    width: 100%;
+
+    box-sizing: border-box;
+    display: flex;
+}
+.section7 .col{
+    width: 50%;
+    /* border:1px solid; */
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 50px ;
+}
+.section7 .subtitle{
+    text-align: center;
+    border-bottom: 2px solid #CC3635;
+    padding-bottom: 5px;
+   
+}
+.section7 img{
+    width: 100%;
+}
+.section7 .intro{
+    margin-bottom: 18px;
+}
+.section7 .text{
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+.py{
+    padding: 0 30px;
+}
+/* 傳統活動 */
+.section8 .row{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.section8 .row:nth-child(even){
+        flex-direction: row-reverse;
+    }
+.section8 .text_area{
+    width: 480px;
+    text-align: center;
+    padding: 0 60px;
+}
+.section8 .subtitle{
+    padding: 30px 0;
+    color: #000;
+    border-bottom: 2px solid #CC3635;
+    margin-bottom: 30px;
+}
+.section8 .intro{
+    padding: 0 50px;
+    text-align: left;
+    color: #333;
+}
+.section8 .img_area{
+    width: 600px;
+    height: 335px;
+    position: relative;
+}
+.section8 .img1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 242px;
+    background-color: #555;
+    background-size: cover;
+}
+.evn1-1{
+    background-image: url('../img/event-1-1.jpg');
+}
+.evn2-1{
+    background-image: url('../img/event-2-1.jpg');
+}
+.evn3-1{
+    background-image: url('../img/event-3-1.jpg');
+}
+.evn4-1{
+    background-image: url('../img/event-4-1.jpg');
+}
+.evn5-1{
+    background-image: url('../img/event-5-1.jpg');
+}
+.section8 .img2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 245px;
+    height: 245px;
+    background-color: #444;
+    background-size: cover;
+}
+.evn1-2{
+    background-image: url('../img/event-1-2.jpg');
+}
+.evn2-2{
+    background-image: url('../img/event-2-2.jpg');
+}
+.evn3-2{
+    background-image: url('../img/event-3-2.jpg');
+}
+.evn4-2{
+    background-image: url('../img/event-4-2.jpg');
+}
+.evn5-2{
+    background-image: url('../img/event-5-2.jpg');
+}
+ /* footer 開始*/
+footer{
+    background-color: #111;
+}
+footer .container{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    
+}
+footer .icons{
+    display: flex;
+}
+footer .icon{
+
+    margin-right: 20px;
+    
+}
+footer i{
+    font-size: 35px ;
+    background-color: #fff;
+}
+.fa-facebook{
+    color: #3b5998;
+}
+.fa-twitter-square{
+    color: #1da1f2;
+}
+.fa-google-plus-square{
+    color: #dd4b39;
+}
+.copyright{
+    color: #fff;
+}
+
+
+
+/* rwd */
+
+
+/* 動畫區 */
+
+/* 導覽列hover */
+
+@keyframes home-move {
+    from {
+        opacity: 0;
+        transform: translate(-80%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(15%, 0);
+    }
+}
+
+@keyframes home-flash {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes arrow-down {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    60% {
+        opacity: 0.4;
+        transform: translate(0, 80%) scale(0.9);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 100%) scale(0.9);
+    }
+}
