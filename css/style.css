@@ -262,9 +262,9 @@ body {
     position: relative;
 }
 
-.fes_name {
-    font-size: 36px;
-    font-weight: bold;
+.fes .fes_name {
+
+    text-align: left;
     margin-bottom: 10px;
 }
 
@@ -320,10 +320,6 @@ body {
     background-image: url('../img/fes_hanabi.jpg');
 }
 
-.fi5 {
-    background-image: url('../img/fes_meiji.jpg');
-}
-
 .fes_bg {
     position: absolute;
     left: 40px;
@@ -355,7 +351,9 @@ body {
 }
 
 /* 橫丁 */
-
+.section3-2{
+    display: none;
+}
 .yoko {
     box-sizing: border-box;
     display: flex;
@@ -377,12 +375,16 @@ body {
     background-color: rgb(49, 3, 3);
     opacity: 0;
     float: left;
-    transition: 10s;
+    transition: 4s;
 }
+.t0{
+    transition: 0;
+}
+
 .yoko_card:hover .cover{
     opacity: 0.8;
-   
 }
+
 .yoko_card:nth-child(1) {
     background-image: url("../img/yoko1.jpg");
 }
@@ -819,10 +821,12 @@ footer img{
   background-color: #fff;
   border-radius:5px;
 }
+.copyright{
+    color: #fff;
+    font-size: 12px;
+    padding-top: 5px;
+}
 
-
-
-/* rwd */
 
 
 /* 動畫區 */
