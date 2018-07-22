@@ -282,3 +282,39 @@ $(window).mousemove(function(event){
     $('.subtitle_img').css('transform','translateX('+ (introx2/120-10)+ 'px)');
     $('.home_title_block').css('transform','translateY('+ (introy2/80-10)+ 'px)');
 });
+
+ // 點logo回到首頁
+ $(".logo").on("click", function (e) {
+    $('html, body').animate({
+        scrollTop: 0 // 只需修改此處
+    }, 750); // 750是滑動的時間，單位為毫秒
+    e.preventDefault();
+});
+// 點東京趣事到
+$(".attractions").on("click", function (e) {
+    $('html, body').animate({
+        scrollTop: $(".section2").offset().top // 只需修改此處
+    }, 750); // 750是滑動的時間，單位為毫秒
+    e.preventDefault();
+});
+// 點美食到拉麵
+$(".food").on("click", function (e) {
+    $('html, body').animate({
+        scrollTop: $(".section5").offset().top // 只需修改此處
+    }, 750); // 750是滑動的時間，單位為毫秒
+    e.preventDefault();
+});
+// 點魅力到活動
+$(".events").on("click", function (e) {
+    $('html, body').animate({
+        scrollTop: $(".section8").offset().top // 只需修改此處
+    }, 750); // 750是滑動的時間，單位為毫秒
+    e.preventDefault();
+});
+// 點開始到
+$(".home .btn").on("click", function (e) {
+    $('html, body').animate({
+        scrollTop: $("#section2").offset().top // 只需修改此處
+    }, 750); // 750是滑動的時間，單位為毫秒
+    e.preventDefault();
+});
