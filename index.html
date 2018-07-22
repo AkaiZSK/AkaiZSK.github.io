@@ -12,7 +12,7 @@
   </head>
   <body>
     <div id="vue_all">
-      <nav>
+      <nav class="nav">
         <div class="container"><a class="logo" href=""><span>JP</span>TOURISM</a><a class="toggle" href="">
             <div class="bar bar1"></div>
             <div class="bar bar2"></div>
@@ -41,12 +41,12 @@
         <div class="container">
           <div class="timeline"></div>
           <div class="row" v-for="item in fes"> 
-            <div class="col">
+            <div class="col" data-aos="fade-up">
               <h3 class="subtitle">{{ item.name}}</h3>
               <h5 class="date">{{ item.date }}</h5>
               <p class="intro">{{item.intro}}</p>
             </div>
-            <div class="col">
+            <div class="col" data-aos="fade-up">
               <div class="cover"><img :src=" item.img_src " alt=""/></div>
             </div>
           </div>
@@ -159,7 +159,7 @@
         <h2 class="title">日本必吃-拉麵比拚</h2>
         <div class="intro">東京拉麵一般按照味道或店名來分類。將為您介紹東京都內三大特色拉麵聚集地!!</div>
         <div class="container">
-          <div class="card" v-for="ramen in ramens"><img class="img" :src="ramen.img_src" alt=""/>
+          <div class="card" v-for="ramen in ramens" data-aos="flip-left" data-aos-duration="800"><img class="img" :src="ramen.img_src" alt=""/>
             <div class="subtitle">{{ramen.name}}</div>
             <div class="intro">{{ramen.intro}}</div><a class="btn" href=""><span>{{ramen.shop}}</span><img src="img/05_ramen/ramen_shop_arrow.png" alt=""/></a>
           </div>
@@ -169,7 +169,7 @@
         <h2 class="title">洋和菓子-甜點對決</h2>
         <div class="intro">老字號的傳統和菓子以及世界級的洋菓子，東京獨家美味甜點任君挑選。</div>
         <div class="container">
-          <div class="col-xl">
+          <div class="col-xl" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out-back"> 
             <div class="row">
               <div class="col-sm">
                 <div class="subtitle">和菓子</div>
@@ -204,7 +204,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl">
+          <div class="col-xl" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out-back">
             <div class="row">
               <div class="col-sm">
                 <div class="subtitle">洋菓子</div>
@@ -281,6 +281,7 @@
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
     <script src="js/script.js"></script>
   </body>

@@ -141,6 +141,8 @@ var event_data = [
         // "deco" : ""
     }
 ]
+// vue
+
 var vm1 = new Vue({
     el: '#vue_all',
     data: {
@@ -155,7 +157,7 @@ var vm1 = new Vue({
 
 
 
-
+// yoko的動作
 $(".section3 .card").click(function () {
     // 文字出現
     $(this).find(".intro").toggleClass("open");
@@ -191,7 +193,7 @@ $(".section3 .card:nth-child(4)").click(function () {
     $(".section3 .card:nth-child(2)").toggleClass("slide-left");
     $(".section3 .card:nth-child(3)").toggleClass("slide-left");
 });
-
+// swiper
 var swiper = new Swiper('#yoko', {
     slidesPerView: 1,
     loop: true,
@@ -237,4 +239,46 @@ var trad_swiper = new Swiper('.trad', {
         el: '.swiper-pagination',
         type: 'progressbar',
     },
+});
+
+// nav
+var home_height = $(".home").outerHeight() - 10;
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+
+            if (scrollTop > home_height) {
+                //nav show ,postition fixed,change top and bg-color
+                $(".nav").css("background-color", "#18232B");
+                $(".nav").css("top", "0px");
+                $(".nav").css("position", "fixed");
+            } else if (scrollTop > 100) {
+                $(".nav").css("top", "-50px");
+            } else {
+                $(".nav").css("position", "absolute");
+                $(".nav").css("background-color", "rgba(0,0,0,0)");
+                $(".nav").css("top", "40px");
+            }
+        });
+
+AOS.init();
+
+
+
+$(window).mousemove(function(event){
+    var x = event.pageX
+	var y = event.pageY
+	var introx = x-$('.section5').offset().left;
+    var introy = y-$('.section5').offset().top;
+    $('.section5 .bottom').css('transform','translate('+ (introx/25) + 'px,' + (introy/50) + 'px)');
+});
+
+$(window).mousemove(function(event){
+    var x2 = event.pageX
+	var y2 = event.pageY
+	var introx2 = x2-$('.home').offset().left;
+    var introy2 = y2-$('.home').offset().top;
+    $('.title_img').css('transform','translateX('+ (introx2/100-50)+ 'px)');
+    $('.slogn_img').css('transform','translateX('+ (-introx2/80-10)+ 'px)');
+    $('.subtitle_img').css('transform','translateX('+ (introx2/120-10)+ 'px)');
+    $('.home_title_block').css('transform','translateY('+ (introy2/80-10)+ 'px)');
 });

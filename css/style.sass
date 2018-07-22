@@ -52,14 +52,21 @@ section
 
 nav
     position: absolute
-    top: 40px
+    top: 20px
     width: 100%
     transition: .5s
+    z-index: 99
+    padding: 12px
     a
         color: $white
         +font-min
         font-weight: bold
         transition: .4s
+        &:hover
+            color: $red
+            span
+                color: $white
+
     span 
         color: $red
     ul 
@@ -69,14 +76,20 @@ nav
     li 
         margin-left: 30px
         position: relative
-    .dash_line
-        position: absolute
-        bottom: 2px
-        right: 0
-        width: 0%
-        height: 2px
-        background-color: $white
-        transition: .4s        
+        .dash_line
+            position: absolute
+            bottom: -8px
+            right: 0
+            width: 0%
+            height: 2px
+            background-color: $white
+            transition: .4s    
+        &:hover
+            .dash_line
+                left: 0
+                width: 100%
+                background-color: $red
+        
 .home
     width: 100%
     height: calc(100vh - 150px)
@@ -117,10 +130,15 @@ nav
         background-color: $white
         color: $dark_blue
         font-weight: bold
+        span
+            border-bottom: 2px solid $dark_blue
+    .arrow_down
+        animation: arrow-down 2s 1.6s infinite both linear
 .section2
     background-color: $grey
     padding-bottom: 0
     .container
+        margin-top: 50px
         flex-direction: column
         position: relative
     .timeline
@@ -182,10 +200,15 @@ nav
     .container
         max-width: 1140px
         overflow: hidden
+        margin-top: 50px
         .card
             width: calc(25% - 30px)
             transition: .3s
             position: relative
+            cursor: pointer
+            &:hover
+                .subtitle
+                    color: $red
             img
                 width: 100%
 
@@ -273,9 +296,11 @@ nav
     display: none
     
 .section5
-    margin-bottom: 200px
+    padding-bottom: 400px
     position: relative
+    overflow: hidden
     .card
+        margin-top: 50px
         width: calc((100% - 60px)/3)
         display: flex
         flex-direction: column
@@ -309,12 +334,13 @@ nav
                     border-bottom: 2px solid $white
     .bottom
         position: absolute
-        bottom: -200px
+        bottom: 0
         z-index: -2
 
 .section6
     background-color: $grey
     .container
+        margin-top: 50px
         justify-content: space-between
         width: 100%
         .col-xl
@@ -399,17 +425,31 @@ nav
             .btn
                 position: absolute
                 width: 100%
-                text-align: center
                 border: 2px solid #eee
                 display: block
                 color: #CC3635
                 text-decoration: none
-                padding: 5px 0
+                padding: 8px 0
                 font-weight: bold
-                bottom: 30px
+                bottom: 0px
+                img
+                    position: absolute
+                    bottom: 12px
+                    right: 100px
+                    transition: .8s
+                span
+                    margin-left: 50px
+                    transition: .5s
+                &:hover
+                    span
+                        border-bottom: 2px solid $red
+                    img
+                        right: 50px
+                        
     .row:nth-child(even)
         flex-direction: row-reverse
 .section8
+    background-color: #F19483
     .container
         // position: relative
         flex-direction: column
@@ -456,4 +496,14 @@ nav
                 float: right
                 width: 70%
                 margin-top: 40px
-                
+
+@keyframes arrow-down 
+    0%
+        opacity: 1
+        transform: translate(0, 0) scale(1)
+    60%
+        opacity: 0.4
+        transform: translate(0, 80%) scale(.9)
+    100%
+        opacity: 0
+        transform: translate(0, 100%) scale(.9)
