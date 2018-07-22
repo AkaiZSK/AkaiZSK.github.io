@@ -98,35 +98,58 @@ var trad_data = [
     }
 ]
 
-var vm1 = new Vue({
-    el: '#vue2',
-    data: {
-        fes: fes_data
+var event_data = [
+    {
+        "name" : "忍者參上",
+        "eng" : "Ninja",
+        "intro_1" : "換上忍者裝體驗飛鏢射擊。",
+        "intro_2" : "還有體術、武器術入門、變身鎧甲武士等體驗課程。",
+        "img_src" : "img/08_trad_events/event-1.jpg"
+        // "deco" : "
     }
-});
-var vm2 = new Vue({
-    el: '#vue3',
+    // ,{
+    //     "name" : "藝妓與武士",
+    //     "eng" : "Geisha&Samurai",
+    //     "intro_1" : "由化妝師一對一打造，讓人搖身一變成為舞妓或武士。",
+    //     "intro_2" : "此外，也有沙龍照與外出散步的體驗方案。",
+    //     "img_src" : "img/08_trad_events/event-2.jpg"
+    //     // "deco" : ""
+    // }
+    ,{
+        "name" : "和服漫步",
+        "eng" : "Wafuku",
+        "intro_1" : "無須準備即可前往體驗試穿和服，",
+        "intro_2" : "同時享受漫步在街上的樂趣。",
+        "img_src" : "img/08_trad_events/event-3.jpg"
+        // "deco" : ""
+    }
+    // ,{
+
+    //     "name" : "敲響和太鼓",
+    //     "eng" : "Taiko Drum",
+    //     "intro_1" : "和太鼓體驗讓您感受魄力十足的鼓聲。",
+    //     "intro_2" : "可在此盡情地敲打和太鼓，流下暢快淋漓的汗水。",
+    //     "img_src" : "img/08_trad_events/event-4.jpg"
+    //     // "deco" : ""
+    // }
+    ,{
+        "name" : "茶道體驗",
+        "eng" : "Tea Ceremony",
+        "intro_1" : "靜謐的日本橋茶室，讓人完全想像不到此地是東京鬧區。",
+        "intro_2" : "除了正統的個人茶道體驗之外，還有茶會體驗。",
+        "img_src" : "img/08_trad_events/event-5.jpg"
+        // "deco" : ""
+    }
+]
+var vm1 = new Vue({
+    el: '#vue_all',
     data: {
-        yokos : yoko_data
-    },
-});
-var vm2_2 = new Vue({
-    el: '#vue3_2',
-    data: {
-        yokos : yoko_data
-    },
-});
-var vm3 = new Vue({
-    el: '#vue5',
-    data: {
-        ramens : ramen_data
-    },
-});
-var vm4 = new Vue({
-    el: '#vue7',
-    data: {
-       trads : trad_data
-    },
+        fes: fes_data,
+        yokos : yoko_data,
+        ramens : ramen_data,
+        trads : trad_data,
+        events : event_data
+    }
 });
 
 

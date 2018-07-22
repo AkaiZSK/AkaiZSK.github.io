@@ -129,6 +129,7 @@
                 .subtitle
                     margin-bottom: 20px
     .section5
+        margin-bottom: 80px
         .container
             flex-direction: column
             align-items: center
@@ -146,10 +147,34 @@
                 +phone-intro
             a
                 +phone-min
+        .bottom
+            bottom: -80px
+    .section6
+        .container
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            .col-xl
+                align-items: center
+                .row
+                    flex-direction: column
+                    .col-sm
+                        .intro
+                            +phone-subtitle
+                            margin-top: 20px
+                        .min
+                            +phone-intro
+                            padding: 0 0px 
+                        .subtitle
+                            margin: 0 30px
+                            +phone-subtitle
+                &:nth-child(even)
+                    .row
+                        flex-direction: column
     .section7
         .row
             flex-direction: column
-            height: 100vh
+            height: 80vh
             .img_area
                 width: 100%
                 .swiper-container
@@ -165,6 +190,7 @@
                 .text
                     width: 90%
                     justify-content: flex-start
+                    background-size: 70%
                     .title
                         width: 50px
                     .line
@@ -172,5 +198,7 @@
                         margin: 25px 0
                     .btn
                         width: 70%
+                        bottom: -20px
+                        
         .row:nth-child(even)
             flex-direction: column

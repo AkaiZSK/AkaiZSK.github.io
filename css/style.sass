@@ -409,3 +409,51 @@ nav
                 bottom: 30px
     .row:nth-child(even)
         flex-direction: row-reverse
+.section8
+    .container
+        // position: relative
+        flex-direction: column
+        .full
+            margin-bottom: 50px
+        .text_area
+            margin-top: 100px
+            float: left
+            display: flex
+            width: 100px
+            height: 100%
+            .subtitle,.subtitle_eng,.intro 
+                writing-mode: vertical-lr
+                text-align: left
+            .subtitle
+                +font-title
+                background-color: $red
+                height: 300px
+                padding: 15px 10px
+                color: $white
+
+            .subtitle_eng
+                +font-min
+                font-weight: bold
+                margin: 70px 20px
+                letter-spacing: 3px
+            .intro 
+                margin-top: 100px
+                margin-left: 10px
+        .img_area
+            margin-top: 160px
+           
+            .deco
+                position: absolute
+                top: 0
+                left: 30%
+                transform: translateX(-50%)
+                width: 100px
+                height: 100px
+                background-color: $red
+                background-size: cover
+                background-repeat: no-repeat
+            img
+                float: right
+                width: 70%
+                margin-top: 40px
+                
