@@ -16,7 +16,7 @@ html(lang="en")
                     a.logo(href="")
                         span JP
                         | TOURISM
-                    a.toggle(href="")
+                    btn.toggle
                         .bar.bar1
                         .bar.bar2
                         .bar.bar3
@@ -36,7 +36,23 @@ html(lang="en")
                                 span 東京
                                 | 魅力
                             .dash_line
-            
+            .nav_phone
+                ul
+                    li
+                        a.attractions(href="")
+                            span 東京
+                            | 趣事
+                        .dash_line
+                    li
+                        a.food(href="")
+                            span 東京
+                            | 美食
+                        .dash_line
+                    li
+                        a.events(href="")
+                            span 東京
+                            | 魅力
+                        .dash_line
             section.home
                 .container
                     .home_title_block
@@ -170,7 +186,7 @@ html(lang="en")
                         img.img(:src="ramen.img_src", alt="")
                         .subtitle {{ramen.name}}
                         .intro {{ramen.intro}}
-                        a.btn(href="")
+                        a.btn(:href="ramen.shop_href",target="_blank")
                             span {{ramen.shop}}
                             img(src="img/05_ramen/ramen_shop_arrow.png", alt="")
                 img.bottom(src="img/09-deco/city.svg", alt="")
@@ -253,7 +269,7 @@ html(lang="en")
                             img.title(:src="trad.img_name", alt="")
                             .line 
                             .intro {{trad.intro}}
-                            a.btn(href="")
+                            a.btn(:href="trad.shop_href" target="_blank")
                                 span {{trad.shop}}
                                 img(src="img/06_trad_cuisine/arrow_grey.png", alt="")
 
@@ -263,15 +279,19 @@ html(lang="en")
                 .container
                     .full(v-for="event in events")
                         .text_area
-                            .subtitle {{event.name}}
-                            .subtitle_eng {{event.eng}}
-                            .intro {{event.intro_1}}
-                            .intro {{event.intro_2}}
-                        .img_area
-                            img(:src="event.img_src", alt="")
+                            .subtitle(data-aos="fade-up") {{event.name}}
+                            .subtitle_eng(data-aos="fade-up") {{event.eng}}
+                            .intro(data-aos="fade-up",data-aos-delay="200") {{event.intro_1}}
+                            .intro(data-aos="fade-up",data-aos-delay="200") {{event.intro_2}}
+                        .img_area()
+                            img(:src="event.img_src", alt="",data-aos="fade-left-up")
                             //- .deco(:style="'background-image:url('+event.img_deco+')'")
             footer
-
+                .container
+                    .icon
+                        img(src="img/facebook.svg", alt="")
+                        img(src="img/twitter.svg", alt="")
+                    .copyright Copyright © 2012 JPTOURISM Inc. All rights reserved
         
         script(src="js/jquery-3.3.1.min.js")
         script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")

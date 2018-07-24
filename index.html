@@ -13,10 +13,12 @@
   <body>
     <div id="vue_all">
       <nav class="nav">
-        <div class="container"><a class="logo" href=""><span>JP</span>TOURISM</a><a class="toggle" href="">
+        <div class="container"><a class="logo" href=""><span>JP</span>TOURISM</a>
+          <btn class="toggle">
             <div class="bar bar1"></div>
             <div class="bar bar2"></div>
-            <div class="bar bar3"></div></a>
+            <div class="bar bar3"></div>
+          </btn>
           <ul>
             <li><a class="attractions" href=""><span>東京</span>趣事</a>
               <div class="dash_line"></div>
@@ -30,6 +32,19 @@
           </ul>
         </div>
       </nav>
+      <div class="nav_phone">
+        <ul>
+          <li><a class="attractions" href=""><span>東京</span>趣事</a>
+            <div class="dash_line"></div>
+          </li>
+          <li><a class="food" href=""><span>東京</span>美食</a>
+            <div class="dash_line"></div>
+          </li>
+          <li><a class="events" href=""><span>東京</span>魅力</a>
+            <div class="dash_line"></div>
+          </li>
+        </ul>
+      </div>
       <section class="home">
         <div class="container">
           <div class="home_title_block"><img class="title_img" src="img/00_home/home_title.png" alt=""/><img class="slogn_img" src="img/00_home/home_slogn.png" alt=""/><img class="subtitle_img" src="img/00_home/home_subtitle.png" alt=""/></div><a class="btn" href=""><span>開始旅行</span></a><img class="arrow_down" src="img/00_home/arrow.png" alt=""/>
@@ -161,7 +176,7 @@
         <div class="container">
           <div class="card" v-for="ramen in ramens" data-aos="flip-left" data-aos-duration="800"><img class="img" :src="ramen.img_src" alt=""/>
             <div class="subtitle">{{ramen.name}}</div>
-            <div class="intro">{{ramen.intro}}</div><a class="btn" href=""><span>{{ramen.shop}}</span><img src="img/05_ramen/ramen_shop_arrow.png" alt=""/></a>
+            <div class="intro">{{ramen.intro}}</div><a class="btn" :href="ramen.shop_href" target="_blank"><span>{{ramen.shop}}</span><img src="img/05_ramen/ramen_shop_arrow.png" alt=""/></a>
           </div>
         </div><img class="bottom" src="img/09-deco/city.svg" alt=""/>
       </section>
@@ -257,7 +272,7 @@
           <div class="text_area">
             <div class="text" :style="'background-image:url('+trad.img_deco+')'"><img class="title" :src="trad.img_name" alt=""/>
               <div class="line"> </div>
-              <div class="intro">{{trad.intro}}</div><a class="btn" href=""><span>{{trad.shop}}</span><img src="img/06_trad_cuisine/arrow_grey.png" alt=""/></a>
+              <div class="intro">{{trad.intro}}</div><a class="btn" :href="trad.shop_href" target="_blank"><span>{{trad.shop}}</span><img src="img/06_trad_cuisine/arrow_grey.png" alt=""/></a>
             </div>
           </div>
         </div>
@@ -268,16 +283,21 @@
         <div class="container">
           <div class="full" v-for="event in events">
             <div class="text_area">
-              <div class="subtitle">{{event.name}}</div>
-              <div class="subtitle_eng">{{event.eng}}</div>
-              <div class="intro">{{event.intro_1}}</div>
-              <div class="intro">{{event.intro_2}}</div>
+              <div class="subtitle" data-aos="fade-up">{{event.name}}</div>
+              <div class="subtitle_eng" data-aos="fade-up">{{event.eng}}</div>
+              <div class="intro" data-aos="fade-up" data-aos-delay="200">{{event.intro_1}}</div>
+              <div class="intro" data-aos="fade-up" data-aos-delay="200">{{event.intro_2}}</div>
             </div>
-            <div class="img_area"><img :src="event.img_src" alt=""/></div>
+            <div class="img_area"><img :src="event.img_src" alt="" data-aos="fade-left-up"/></div>
           </div>
         </div>
       </section>
-      <footer></footer>
+      <footer>
+        <div class="container">
+          <div class="icon"><img src="img/facebook.svg" alt=""/><img src="img/twitter.svg" alt=""/></div>
+          <div class="copyright">Copyright © 2012 JPTOURISM Inc. All rights reserved</div>
+        </div>
+      </footer>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

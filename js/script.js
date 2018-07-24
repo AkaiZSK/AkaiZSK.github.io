@@ -56,19 +56,20 @@ var ramen_data = [
         "name" : "池袋",
         "intro" : "從JR池袋站徒步即可抵達的範圍內，遍及東池袋至西池袋的廣大範圍內，顧客大排長龍的熱門拉麵店不勝枚舉。",
         "img_src" : "img/05_ramen/ramen1.jpg",
-        
-        "shop" : "光麺　池袋店"
+        "shop" : "光麺　池袋店",
+        "shop_href" : "https://www.kohmen.com/"
     },{
         "name" : "東京",
         "intro" : "東京拉麵街內著名拉麵店家齊聚一堂。打出「即使連吃一週也不膩」的概念，餐點選擇多樣及口味林林總總，讓您百吃不厭。",
         "img_src" : "img/05_ramen/ramen2.jpg",
-        
-        "shop" : "塩専門ひるがお"
+        "shop" : "塩専門ひるがお",
+        "shop_href" : "http://www.setaga-ya.com/store/hirugao/"
     },{
         "name" : "新宿",
         "intro" : "餐飲店數量規模號稱日本第一的繁華商區的新宿，從JR新宿站的西口前往JR大久保站的小瀧橋通，許多熱門拉麵店比鄰而立。",
         "img_src" : "img/05_ramen/ramen3.jpg",
-        "shop" : "ラーメン凪"
+        "shop" : "ラーメン凪",
+        "shop_href" : "http://www.n-nagi.com/"
     }
 ]
 
@@ -79,21 +80,24 @@ var trad_data = [
         "img_swiper_2" : "img/06_trad_cuisine/sushi2.jpg",
         "img_deco" : "img/06_trad_cuisine/sushi_deco.svg",
         "img_name" : "img/06_trad_cuisine/sushi_title.png",
-        "shop" : "銀座久兵衛"
+        "shop" : "銀座久兵衛",
+        "shop_href" : "http://www.kyubey.jp"
     },{
         "intro" : "蕎麥麵是江戶時代中期日常生活隨處可見的食物，也是代表江戶味道的食物之一。很少有食物像蕎麥麵品嚐時可以發出聲音。據說這是因為連同空氣一起吸入更能夠享受到蕎麥的香味。",
         "img_swiper_1" : "img/06_trad_cuisine/soba1.jpg",
         "img_swiper_2" : "img/06_trad_cuisine/soba2.jpg",
         "img_deco" : "img/06_trad_cuisine/soba_deco.svg",
         "img_name" : "img/06_trad_cuisine/soba_title.png",
-        "shop" : "神田まつや"
+        "shop" : "神田まつや",
+        "shop_href" : "http://www.kanda-matsuya.jp/"
     },{
         "intro" : "以麵粉打底的麵糊上，放上高麗菜等自己喜歡的餡料，然後舖在鐵板上煎烤而成。在東京文字燒街可在此品嚐到魚貝類及具民族特色等口味多樣的文字燒。",
         "img_swiper_1" : "img/06_trad_cuisine/monji1.jpg",
         "img_swiper_2" : "img/06_trad_cuisine/monji2.jpg",
         "img_deco" : "img/06_trad_cuisine/monji_deco.svg",
         "img_name" : "img/06_trad_cuisine/monji_title.png",
-        "shop" : "蔵（月島）"
+        "shop" : "蔵（月島）",
+        "shop_href" : "http://www.kanda-matsuya.jp/p01.htm"
     }
 ]
 
@@ -270,7 +274,7 @@ $(window).resize(function(){
 var wid = $(window).width();
 var home_height = $(".home").outerHeight() - 10;
 
-if(wid > 1000){
+if(wid > 760){
    
         $(window).scroll(function () {
             var scrollTop = $(window).scrollTop();
@@ -288,7 +292,25 @@ if(wid > 1000){
                 $(".nav").css("top", "40px");
             }
     });
-
+    $(".home .subtitle_img").attr("src","../img/00_home/home_subtitle.png");
+    $(window).mousemove(function(event){
+        var x = event.pageX
+        var y = event.pageY
+        var introx = x-$('.section5').offset().left;
+        var introy = y-$('.section5').offset().top;
+        $('.section5 .bottom').css('transform','translate('+ (introx/200) + 'px,' + (introy/100) + 'px)');
+    });
+    
+    $(window).mousemove(function(event){
+        var x2 = event.pageX
+        var y2 = event.pageY
+        var introx2 = x2-$('.home').offset().left;
+        var introy2 = y2-$('.home').offset().top;
+        $('.title_img').css('transform','translateX('+ (introx2/100-50)+ 'px)');
+        $('.slogn_img').css('transform','translateX('+ (-introx2/80-10)+ 'px)');
+        $('.subtitle_img').css('transform','translateX('+ (introx2/120-10)+ 'px)');
+        $('.home_title_block').css('transform','translateY('+ (introy2/80-10)+ 'px)');
+    });
 }else {
     $(window).scroll(function () {
         var scrollTop = $(window).scrollTop();
@@ -306,30 +328,14 @@ if(wid > 1000){
             $(".nav").css("top", "0px");
         }
     });
+    $(".home .subtitle_img").attr("src","../img/00_home/home_subtitle.svg");
 }
         
 AOS.init();
 
 
 
-$(window).mousemove(function(event){
-    var x = event.pageX
-	var y = event.pageY
-	var introx = x-$('.section5').offset().left;
-    var introy = y-$('.section5').offset().top;
-    $('.section5 .bottom').css('transform','translate('+ (introx/25) + 'px,' + (introy/50) + 'px)');
-});
 
-$(window).mousemove(function(event){
-    var x2 = event.pageX
-	var y2 = event.pageY
-	var introx2 = x2-$('.home').offset().left;
-    var introy2 = y2-$('.home').offset().top;
-    $('.title_img').css('transform','translateX('+ (introx2/100-50)+ 'px)');
-    $('.slogn_img').css('transform','translateX('+ (-introx2/80-10)+ 'px)');
-    $('.subtitle_img').css('transform','translateX('+ (introx2/120-10)+ 'px)');
-    $('.home_title_block').css('transform','translateY('+ (introy2/80-10)+ 'px)');
-});
 
  // 點logo回到首頁
  $(".logo").on("click", function (e) {
@@ -360,9 +366,21 @@ $(".events").on("click", function (e) {
     e.preventDefault();
 });
 // 點開始到
-$(".home .btn").on("click", function (e) {
+$(".home a.btn").on("click", function (e) {
     $('html, body').animate({
-        scrollTop: $("#section2").offset().top // 只需修改此處
+        scrollTop: $(".section2").offset().top // 只需修改此處
     }, 750); // 750是滑動的時間，單位為毫秒
     e.preventDefault();
 });
+
+$("btn.toggle").on("click", function () {
+   $(".nav_phone").toggleClass("height_full");
+   $(".bar").toggleClass("click_color");
+   $(".bar1").toggleClass("click");
+   $(".bar2").toggleClass("click");
+   $(".bar3").toggleClass("click");
+});
+
+$(".nav_phone").on("click", function () {
+    $(".nav_phone").toggleClass("height_full");
+ });

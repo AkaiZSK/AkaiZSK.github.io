@@ -49,35 +49,43 @@ $grey: #F7F5F2
                 transition: .3s
             .bar3
                 transition: .1s
-
-        .toggle:hover
-            .bar1
-                transform: translateY(10px) rotate(-45deg)
-            .bar2
-                transform: rotate(45deg)
-            .bar3
-                height: 0
-                
         ul
             display: none
-
+    .bar.click_color
+        background-color: $red !important
+    .bar1.click
+        transform: translateY(7px) rotate(-45deg)
+    .bar2.click
+        transform: rotate(45deg)
+        
+    .bar3.click
+        height: 0 !important
+        
+    .nav_phone
+        display: block
+        
     .home
         background-position: 66% 
         .home_title_block
             width: 100%
             align-items: center
             margin-top: 40%
-            margin-bottom: 20%
+            margin-bottom: 70%
             .title_img
                 width: 40%
-                padding-right: 10px
+                padding: 0
+                margin-bottom: 10px
             .slogn_img
                 width: 60%
                 padding: 0
-                padding-right: 30px
+                margin-bottom: 15px
             .subtitle_img
                 width: 80%
-                padding-left: 10px
+        .btn
+            padding: 5px 10px
+            font-size: 12px
+            border: 1px solid 
+            border-radius: 2px
         .arrow_down
             width: 8%
     
@@ -128,6 +136,7 @@ $grey: #F7F5F2
         display: none
     .section4_2
         display: block
+        padding-bottom: 0px
         .intro
             
         .swiper-container
@@ -186,18 +195,20 @@ $grey: #F7F5F2
     .section7
         .row
             flex-direction: column
-            height: 80vh
+            height: auto
+            margin-top: 0px
             .img_area
                 width: 100%
+                padding: 10px 0
                 .swiper-container
                     width: 85%
                     height: 95%
                     .swiper-pagination
-                        top: 75% !important
+                        top: 99% !important
             .text_area
                 flex-grow: 1
                 height: 50%
-                margin-top: -80px
+                margin: 10px 0
 
                 .text
                     width: 90%
@@ -256,6 +267,8 @@ $grey: #F7F5F2
                     display: inline-block
                 .intro 
                     margin: 0
+                    &:nth-child(even)
+                        margin-top: 0px
                     
             .img_area
                 margin-top: 0px
@@ -273,3 +286,10 @@ $grey: #F7F5F2
                     float: none
                     width: 90%
                     margin-top: 30px
+    footer
+        .container
+            flex-direction: column
+            .icon
+                margin-bottom: 3px
+            .copyright
+                text-align: center

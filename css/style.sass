@@ -89,7 +89,52 @@ nav
                 left: 0
                 width: 100%
                 background-color: $red
-        
+.nav_phone  
+    background-color: rgba($dark_blue,.95)
+    margin-top: 30px
+    width: 100%
+    height: 0vh
+    overflow: hidden
+    position: fixed
+    z-index: 80
+    transition: .3s
+    a
+        color: $white
+        +font-min
+        font-weight: bold
+        transition: .4s
+        &:hover
+            color: $red
+            span
+                color: $white
+.height_full
+    height: 100vh
+
+    span 
+        color: $red
+    ul 
+        list-style: none
+        display: flex
+        flex-direction: column
+        margin: 20px 20px
+        padding: 0
+    li 
+        margin-left: 0px
+        position: relative
+        padding: 10px
+        .dash_line
+            position: absolute
+            bottom: -8px
+            right: 0
+            width: 0%
+            height: 2px
+            background-color: $white
+            transition: .4s    
+        &:hover
+            .dash_line
+                left: 0
+                width: 100%
+                background-color: $red 
 .home
     width: 100%
     height: calc(100vh - 150px)
@@ -298,8 +343,8 @@ nav
 .section5
     padding-bottom: 400px
     position: relative
+    overflow: hidden
     .container
-        overflow-x: hidden
     .card
         margin-top: 50px
         width: calc((100% - 60px)/3)
@@ -451,6 +496,7 @@ nav
         flex-direction: row-reverse
 .section8
     background-color: #F19483
+    overflow-x: hidden
     .container
         // position: relative
         flex-direction: column
@@ -480,6 +526,8 @@ nav
             .intro 
                 margin-top: 100px
                 margin-left: 10px
+                &:nth-child(even)
+                    margin-top: 110px
         .img_area
             margin-top: 160px
            
@@ -497,7 +545,18 @@ nav
                 float: right
                 width: 70%
                 margin-top: 40px
-
+footer
+    background-color: #000
+    padding: 8px 0
+    .container
+        align-items: center
+    img
+        width: 40px
+        margin-right: 20px
+        border-radius: 3px
+    .copyright
+        +font-min
+        color: $white
 @keyframes arrow-down 
     0%
         opacity: 1
