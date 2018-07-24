@@ -1,4 +1,3 @@
-
 var fes_data = [   
     {
         "name": "新年初詣",
@@ -107,14 +106,6 @@ var event_data = [
         "img_src" : "img/08_trad_events/event-1.jpg"
         // "deco" : "
     }
-    // ,{
-    //     "name" : "藝妓與武士",
-    //     "eng" : "Geisha&Samurai",
-    //     "intro_1" : "由化妝師一對一打造，讓人搖身一變成為舞妓或武士。",
-    //     "intro_2" : "此外，也有沙龍照與外出散步的體驗方案。",
-    //     "img_src" : "img/08_trad_events/event-2.jpg"
-    //     // "deco" : ""
-    // }
     ,{
         "name" : "和服漫步",
         "eng" : "Wafuku",
@@ -123,15 +114,6 @@ var event_data = [
         "img_src" : "img/08_trad_events/event-3.jpg"
         // "deco" : ""
     }
-    // ,{
-
-    //     "name" : "敲響和太鼓",
-    //     "eng" : "Taiko Drum",
-    //     "intro_1" : "和太鼓體驗讓您感受魄力十足的鼓聲。",
-    //     "intro_2" : "可在此盡情地敲打和太鼓，流下暢快淋漓的汗水。",
-    //     "img_src" : "img/08_trad_events/event-4.jpg"
-    //     // "deco" : ""
-    // }
     ,{
         "name" : "茶道體驗",
         "eng" : "Tea Ceremony",
@@ -242,7 +224,54 @@ var trad_swiper = new Swiper('.trad', {
 });
 
 // nav
+$(window).resize(function(){
+    var wid = $(window).width();
+    var home_height = $(".home").outerHeight() - 10;
+    
+    if(wid > 1000){
+       
+            $(window).scroll(function () {
+                var scrollTop = $(window).scrollTop();
+    
+                if (scrollTop > home_height) {
+                    //nav show ,postition fixed,change top and bg-color
+                    $(".nav").css("background-color", "#18232B");
+                    $(".nav").css("top", "0px");
+                    $(".nav").css("position", "fixed");
+                } else if (scrollTop > 100) {
+                    $(".nav").css("top", "-50px");
+                } else {
+                    $(".nav").css("position", "absolute");
+                    $(".nav").css("background-color", "rgba(0,0,0,0)");
+                    $(".nav").css("top", "40px");
+                }
+        });
+    
+    }else {
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+    
+            if (scrollTop > home_height) {
+                //nav show ,postition fixed,change top and bg-color
+                $(".nav").css("background-color", "#18232B");
+                $(".nav").css("top", "0px");
+                $(".nav").css("position", "fixed");
+            } else if (scrollTop > 100) {
+                $(".nav").css("top", "-50px");
+            } else {
+                $(".nav").css("position", "absolute");
+                $(".nav").css("background-color", "rgba(0,0,0,0)");
+                $(".nav").css("top", "0px");
+            }
+        });
+    }
+
+})
+var wid = $(window).width();
 var home_height = $(".home").outerHeight() - 10;
+
+if(wid > 1000){
+   
         $(window).scroll(function () {
             var scrollTop = $(window).scrollTop();
 
@@ -258,8 +287,27 @@ var home_height = $(".home").outerHeight() - 10;
                 $(".nav").css("background-color", "rgba(0,0,0,0)");
                 $(".nav").css("top", "40px");
             }
-        });
+    });
 
+}else {
+    $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > home_height) {
+            //nav show ,postition fixed,change top and bg-color
+            $(".nav").css("background-color", "#18232B");
+            $(".nav").css("top", "0px");
+            $(".nav").css("position", "fixed");
+        } else if (scrollTop > 100) {
+            $(".nav").css("top", "-50px");
+        } else {
+            $(".nav").css("position", "absolute");
+            $(".nav").css("background-color", "rgba(0,0,0,0)");
+            $(".nav").css("top", "0px");
+        }
+    });
+}
+        
 AOS.init();
 
 

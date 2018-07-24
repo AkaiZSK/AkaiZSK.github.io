@@ -11,8 +11,12 @@ $grey: #F7F5F2
     font-size: 18px
 @mixin phone-min
     font-size: 12px
-@media (max-width: 576px)
 
+
+
+@media (max-width: 576px)
+    body
+        overflow-x: hidden
     .container
         max-width: 540px
     .title
@@ -161,6 +165,7 @@ $grey: #F7F5F2
             flex-direction: column
             justify-content: center
             align-items: center
+            overflow-x: hidden
             .col-xl
                 align-items: center
                 .row
