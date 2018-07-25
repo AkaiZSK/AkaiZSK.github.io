@@ -381,4 +381,8 @@ $("btn.toggle").on("click", function () {
 
 $(".nav_phone").on("click", function () {
     $(".nav_phone").toggleClass("height_full");
+    $(".bar").toggleClass("click_color");
+    $(".bar1").toggleClass("click");
+    $(".bar2").toggleClass("click");
+    $(".bar3").toggleClass("click");
  });
