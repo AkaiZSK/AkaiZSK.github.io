@@ -306,10 +306,8 @@ if(wid > 760){
         var y2 = event.pageY
         var introx2 = x2-$('.home').offset().left;
         var introy2 = y2-$('.home').offset().top;
-        $('.title_img').css('transform','translateX('+ (introx2/100-50)+ 'px)');
-        $('.slogn_img').css('transform','translateX('+ (-introx2/80-10)+ 'px)');
-        $('.subtitle_img').css('transform','translateX('+ (introx2/120-10)+ 'px)');
-        $('.home_title_block').css('transform','translateY('+ (introy2/80-10)+ 'px)');
+        $('.home').css('background-position', (introx2/50-50)+ 'px' +" "+ (introy2/30-50)+ 'px');
+        
     });
 }else {
     $(window).scroll(function () {
