@@ -151,6 +151,7 @@ $(".section3 .card").click(function () {
 });
 // 點擊第一塊的動作 1對齊 234往又跑 
 $(".section3 .card:nth-child(1)").click(function () {
+    $(".section3 .img").toggleClass("m_0");
     $(this).toggleClass("slide-show");
     $(".section3 .card:nth-child(2)").toggleClass("slide-right");
     $(".section3 .card:nth-child(3)").toggleClass("slide-right");
@@ -159,6 +160,7 @@ $(".section3 .card:nth-child(1)").click(function () {
 });
 // 點擊第一塊的動作 1往左 2對齊 34往又跑
 $(".section3 .card:nth-child(2)").click(function () {
+    $(".section3 .img").toggleClass("m_0");
     $(this).toggleClass("slide-show");
     $(".section3 .card:nth-child(1)").toggleClass("slide-left");
     $(".section3 .card:nth-child(3)").toggleClass("slide-right");
@@ -167,6 +169,7 @@ $(".section3 .card:nth-child(2)").click(function () {
 });
 // 點擊第一塊的動作 12往左 3對齊 4往又跑
 $(".section3 .card:nth-child(3)").click(function () {
+    $(".section3 .img").toggleClass("m_0");
     $(this).toggleClass("slide-show");
     $(".section3 .card:nth-child(1)").toggleClass("slide-left");
     $(".section3 .card:nth-child(2)").toggleClass("slide-left");
@@ -174,6 +177,7 @@ $(".section3 .card:nth-child(3)").click(function () {
 });
 // 點擊第一塊的動作 123往左 4對齊             
 $(".section3 .card:nth-child(4)").click(function () {
+    $(".section3 .img").toggleClass("m_0");
     $(this).toggleClass("slide-show");
     $(".section3 .card:nth-child(1)").toggleClass("slide-left");
     $(".section3 .card:nth-child(2)").toggleClass("slide-left");

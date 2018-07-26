@@ -82,14 +82,16 @@ html(lang="en")
                             .cover
                                 img(:src=" item.img_src ", alt="")
 
-                img.bottom(src="img/09-deco/fujiyama-2.png", alt="")
-
+                img.bottom(src="img/09-deco/fujiyama.svg", alt="")
+                img.phone(src="img/09-deco/fujiyama-2.png", alt="")
             section.section3
                 h2.title 橫丁商圈
                 p.subtitle 讓我們一同前往小巷盡頭的另一個世界——萬眾矚目的橫丁吧！
                 .container
                     .card(v-for="yoko in yokos")
-                        img(:src="yoko.img_src", alt="")
+                        .cover
+                            .img(:style="'background-image:url(' + yoko.img_src + ')'")
+                        
                         .text_area
                             .intro {{ yoko.intro }}
                         .subtitle {{ yoko.name }}
@@ -197,8 +199,8 @@ html(lang="en")
                 h2.title 洋和菓子-甜點對決
                 .subtitle 老字號的傳統和菓子以及世界級的洋菓子，東京獨家美味甜點任君挑選。
                 .container
-                    .col-xl(data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out-back") 
-                        .row
+                    .col-xl 
+                        .row.name
                             .col-sm
                                 .subtitle 和菓子
                         .row
@@ -220,13 +222,13 @@ html(lang="en")
                                 .intro 大福
                                 .min 將紅豆等內餡包在麻糬裡。口味種類相當多樣豐富，有的麵糰加入艾草，有的在內餡裡面放草莓。
                         .row
-                            .col-sm
+                            .col-sm.img
                                 img(src="img/07_sweet/sweet_yokan.jpg", alt="")
                             .col-sm
                                 .intro 羊羹
                                 .min 羊羹為一種將紅豆餡用寒天凝固的點心，柔軟可口的水羊羹在夏天冰冰的吃，是熱門的消暑聖品。
-                    .col-xl(data-aos="fade-left" , data-aos-duration="1500",data-aos-easing="ease-in-out-back")
-                        .row
+                    .col-xl
+                        .row.name
                             .col-sm
                                 .subtitle 洋菓子
                         .row

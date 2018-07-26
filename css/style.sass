@@ -12,11 +12,11 @@ $grey: #F7F5F2
     // font-family: 思源黑體
 @mixin font-subtitle
     font-size: 32px
-    font-weight: bold
+    font-weight: 600
     text-align: center
 @mixin font-intro
     font-size: 20px
-    font-weight: bold
+    font-weight: 0
     text-align: center
     font-family: 思源黑體
 @mixin font-min
@@ -49,6 +49,7 @@ section
 .intro
     +font-intro
     // margin-bottom: 40px
+    font-weight: 0
     letter-spacing: 1.4
 .subtitle
     +font-subtitle
@@ -251,6 +252,8 @@ nav
     .bottom
         width: 100%
         margin-bottom: -10px
+    .phone
+        display: none
 .section3
     background-color: darkblue
     padding-bottom: 100px
@@ -263,16 +266,28 @@ nav
         overflow: hidden
         margin-top: 50px
         .card
-            width: calc(25% - 30px)
+            
             transition: .3s
             position: relative
             cursor: pointer
+            // overflow: hidden
             &:hover
                 .subtitle
                     color: $red
-            img
-                width: 100%
-
+            .cover
+                width: 255px
+                height: 315px
+                margin-left: 30px
+                overflow: hidden
+                .img
+                    width: 255px
+                    height: 315px
+                    background-size: cover
+                    transform: scale(1)
+                    transition: 1.8s ease-out
+                &:hover
+                    .img
+                        transform: scale(1.3)
             .intro
                 font-size: 0
                 width: 200px
@@ -284,10 +299,12 @@ nav
                 margin-top: 10px
                 letter-spacing: 1.8
                 line-height: 1.8
+                transform: scale(0)
             .open
                 font-size: 18px
                 width: 650px
                 display: block 
+                transform: scale(1)
             .subtitle
                 font-size: 22px
                 transition: .2s
@@ -306,30 +323,30 @@ nav
         .slide-left,.slide-right
             pointer-events: none
         .card:nth-child(1).slide-left
-            transform: translateX(-245px)
+            transform: translateX(-285px)
             z-index: -2
         .card:nth-child(1).slide-show
-            transform: translateX(50px)
+            transform: translateX(40px)
         .card:nth-child(2).slide-left
-            transform: translateX(-530px) scale(.99)
+            transform: translateX(-580px) scale(.99)
             z-index: -1
         .card:nth-child(2).slide-show
             transform: translateX(-250px)
         .card:nth-child(2).slide-right
-            transform: translateX(825px) scale(.98)
+            transform: translateX(885px) scale(.98)
             z-index: 2
         .card:nth-child(3).slide-left
-            transform: translateX(-815px) scale(.98)
+            transform: translateX(-895px) scale(.98)
             z-index: 1
         .card:nth-child(3).slide-show
-            transform: translateX(-550px)
+            transform: translateX(-530px)
         .card:nth-child(3).slide-right
-            transform: translateX(535px) scale(.99)
+            transform: translateX(585px) scale(.99)
             z-index: 1           
         .card:nth-child(4).slide-show
-            transform: translateX(-840px)
+            transform: translateX(-820px)
         .card:nth-child(4).slide-right
-            transform: translateX(250px)
+            transform: translateX(300px)
 .section3_2
     display: none
 
@@ -375,8 +392,8 @@ nav
         flex-direction: column
         align-items: center
         position: relative
-        box-shadow: 1px 1px 2px #222
-        
+        box-shadow: 2px 2px 8px #999
+        background-color: #fff
         padding-bottom: 100px
         
         .img
@@ -412,10 +429,10 @@ nav
     .bottom
         position: absolute
         bottom: 0
-        z-index: -2
+        z-index: -3
 
 .section6
-    background-color: $grey
+    background-color: #F19483
     
     .container
         margin-top: 50px
@@ -427,23 +444,35 @@ nav
             width: 50%
             .row
                 display: flex
-                margin: 15px 0
+                margin: 30px 0
+                height: 176px
                 justify-content: space-between
-                .col-sm
-                    flex-grow: 1
+                box-shadow: 2px 2px 10px #b84d3b
+                border-bottom: 2px solid #333
+                background-color: $grey
+                .col-sm                      
                     .intro
-                        margin-bottom: 20px
+                        margin: 20px 0
                     .min
                         +font-min
-                        padding: 0 40px 
+                        padding: 0 30px 
                         text-align: center
                         font-weight: bold
                 .subtitle
                     border-bottom: 2px solid $red
                     margin: 0 100px
-            &:nth-child(even)
-                .row
-                    flex-direction: row-reverse
+            .row.name
+                height: 50px
+                align-items: center
+                box-shadow: 0 0 0 0
+                border: none
+                background-color: rgba(0,0,0,0)
+                .col-sm
+                    width: 100%
+        .col-xl:nth-child(odd)
+            margin-right: 15px
+        .col-xl:nth-child(even)
+            margin-left: 15px
 .section7
     .row
         height: 594px
@@ -476,6 +505,19 @@ nav
         .text_area
             flex-grow: 1
             height: 100%
+            position: relative
+            &:before
+                content: ""
+                width: 63.5px
+                height: 80px
+                position: absolute
+                background-color: $red
+                top: 50%
+                transform: translate(-70%,-50%)
+                z-index: 2
+                clip-path: polygon(0% 50%,100% 0%,100% 100%)
+                animation: arrow-left 3s linear infinite  -.2s
+            
             .text
                 margin: 0 auto
                 width: 380px
@@ -523,60 +565,65 @@ nav
                         border-bottom: 2px solid $red
                     img
                         right: 50px
-                        
+        &:nth-child(even)
+            .text_area
+                &:before
+                    right: 0
+                    transform: translate(70%, -50%) rotate(180deg) 
+                    animation-name: arrow-right
     .row:nth-child(even)
         flex-direction: row-reverse
 .section8
-    background-color: #F19483
+    background-color: $grey
     overflow-x: hidden
     .container
         // position: relative
         flex-direction: column
         .full
             margin-bottom: 50px
-        .text_area
-            margin-top: 100px
-            float: left
-            display: flex
-            width: 100px
-            height: 100%
-            .subtitle,.subtitle_eng,.intro 
-                writing-mode: vertical-lr
-                text-align: left
-            .subtitle
-                +font-title
-                background-color: $red
-                height: 300px
-                padding: 15px 10px
-                color: $white
-
-            .subtitle_eng
-                +font-min
-                font-weight: bold
-                margin: 70px 20px
-                letter-spacing: 3px
-            .intro 
+            .text_area
                 margin-top: 100px
-                margin-left: 10px
-                &:nth-child(even)
-                    margin-top: 110px
+                float: left
+                display: flex
+                width: 100px
+                height: 100%
+                .subtitle,.subtitle_eng,.intro 
+                    writing-mode: vertical-lr
+                    text-align: left
+                .subtitle
+                    +font-title
+                    background-color: #32bbe1 
+                    height: 300px
+                    padding: 15px 10px
+                    color: $white
+
+                .subtitle_eng
+                    +font-min
+                    font-weight: bold
+                    margin: 70px 20px
+                    letter-spacing: 3px
+                .intro 
+                    margin-top: 100px
+                    margin-left: 10px
+                    &:nth-child(even)
+                        margin-top: 110px
+            &:nth-child(2)
+                .text_area
+                    .subtitle
+                        background-color: #ee6886
+            &:nth-child(3)
+                .text_area
+                    .subtitle
+                        background-color: #8dc61e 
         .img_area
             margin-top: 160px
-           
-            .deco
-                position: absolute
-                top: 0
-                left: 30%
-                transform: translateX(-50%)
-                width: 100px
-                height: 100px
-                background-color: $red
-                background-size: cover
-                background-repeat: no-repeat
             img
                 float: right
                 width: 70%
                 margin-top: 40px
+            
+            
+
 footer
     background-color: #000
     padding: 8px 0
@@ -599,3 +646,25 @@ footer
     100%
         opacity: 0
         transform: translate(0, 100%) scale(.9)
+
+
+@keyframes arrow-right
+    0%
+        opacity: 1
+        transform: translate(0%, -50%) rotate(180deg)
+    50%
+        opacity: 0.4
+        transform: translate(80%, -50%) rotate(180deg)
+    100%
+        opacity: 0.0
+        transform: translate(110%, -50%) rotate(180deg)
+@keyframes arrow-left
+    0%
+        opacity: 1
+        transform: translate(-0%, -50%) 
+    50%
+        opacity: 0.4
+        transform: translate(-80%, -50%)
+    100%
+        opacity: 0.0
+        transform: translate(-110%, -50%)

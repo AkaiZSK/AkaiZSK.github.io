@@ -7,6 +7,7 @@ $grey: #F7F5F2
     font-size: 26px
 @mixin phone-subtitle
     font-size: 22px
+    padding: 0 10px
 @mixin phone-intro
     font-size: 18px
 @mixin phone-min
@@ -110,14 +111,23 @@ $grey: #F7F5F2
                 .date
                     +phone-subtitle
                     margin: 0
+                    font-weight: normal
                     margin-bottom: 30px
                 .intro
                     margin-bottom: 50px
+        .bottom
+            display: none
+        .phone
+            display: block
+            width: 100%
+            margin-bottom: -10px
+            z-index: 2
     .section3
         display: none
     .section3_2
         display: flex
         flex-direction: column
+        margin-top: 30px
         .intro
             margin-bottom: 50px
         .swiper-wrapper
@@ -160,7 +170,7 @@ $grey: #F7F5F2
             flex-direction: column
             align-items: center
             margin-top: 50px
-            margin-bottom: 100px
+            margin-bottom: 0px
             .img
                 width: 60%
                 margin-bottom: 10px
@@ -171,6 +181,7 @@ $grey: #F7F5F2
         .bottom
             bottom: 0px
     .section6
+        // display: none
         .container
             flex-direction: column
             justify-content: center
@@ -178,21 +189,34 @@ $grey: #F7F5F2
             overflow-x: hidden
             .col-xl
                 align-items: center
+    
                 .row
                     flex-direction: column
+                    height: auto
                     .col-sm
                         .intro
                             +phone-subtitle
-                            margin-top: 20px
+                            margin-top: 10px
+                            margin-bottom: 10px
                         .min
+                            margin-bottom: 20px
                             +phone-intro
-                            padding: 0 0px 
+                            padding: 0 10px
+                            margin-top: 0 
                         .subtitle
                             margin: 0 30px
                             +phone-subtitle
-                &:nth-child(even)
-                    .row
-                        flex-direction: column
+                .row.name
+                    
+                    height: auto
+                    margin: 0
+                    align-items: center
+                    box-shadow: 0 0 0 0
+                    border: none
+                    background-color: rgba(0,0,0,0)
+                    &:nth-child(even)
+                        .row
+                            flex-direction: column
     .section7
         .row
             flex-direction: column
@@ -210,7 +234,8 @@ $grey: #F7F5F2
                 flex-grow: 1
                 height: 50%
                 margin: 10px 0
-
+                &:before
+                    display: none
                 .text
                     width: 90%
                     justify-content: flex-start
@@ -240,49 +265,50 @@ $grey: #F7F5F2
         .row:nth-child(even)
             flex-direction: column
     .section8
+        overflow: hidden
         .container
             flex-direction: column
             .full
                 margin-bottom: 0px
                 display: flex
                 flex-direction: column-reverse
-            .text_area
-                float: none
-                display: block
-                width: 90%
-                height: 100%
-                margin: 15px 20px
-                margin-right: 0
-                .subtitle,.subtitle_eng,.intro 
-                    writing-mode: horizontal-tb
-                .subtitle
-                    +phone-subtitle
-                    height: auto
-                    padding: 10px 0
-                    box-sizing: border-box
-                    background-color: rgba(0,0,0,0)
-                    color: $red
-                    display: inline-block
-                .subtitle_eng
-                    margin: 0px 20px
-                    display: inline-block
-                .intro 
-                    margin: 0
-                    &:nth-child(even)
-                        margin-top: 0px
-                    
+                .text_area
+                    float: none
+                    display: block
+                    width: 90%
+                    height: 100%
+                    margin: 15px 20px
+                    margin-right: 0
+                    .subtitle,.subtitle_eng,.intro 
+                        writing-mode: horizontal-tb
+                    .subtitle
+                        +phone-subtitle
+                        height: auto
+                        padding: 10px 0
+                        box-sizing: border-box
+                        background-color: rgba(0,0,0,0)
+                        color: $red
+                        display: inline-block
+                    .subtitle_eng
+                        margin: 0px 20px
+                        display: inline-block
+                    .intro 
+                        margin: 0
+                        &:nth-child(even)
+                            margin-top: 0px
+                &:nth-child(2)
+                    .text_area
+                        .subtitle
+                            background-color: rgba(0,0,0,0)
+                &:nth-child(3)
+                    .text_area
+                        .subtitle
+                            background-color: rgba(0,0,0,0) 
             .img_area
                 margin-top: 0px
                 display: flex
                 align-items: center
                 justify-content: center
-                .deco
-                    position: absolute
-                    top: 0
-                    left: 30%
-                    transform: translateX(-50%)
-                    width: 100px
-                    height: 100px
                 img
                     float: none
                     width: 90%
