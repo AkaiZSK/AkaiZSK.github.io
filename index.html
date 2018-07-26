@@ -54,7 +54,7 @@
       </section>
       <section class="section2">
         <h2 class="title">節慶祭典</h2>
-        <div class="intro">為您介紹東京都內舉辦的幾個大型祭典，<br/>還在安排時間的您不妨參考。</div>
+        <div class="subtitle">為您介紹東京都內舉辦的幾個大型祭典，<br/>還在安排時間的您不妨參考。</div>
         <div class="container">
           <div class="timeline"></div>
           <div class="row" v-for="item in fes"> 
@@ -71,7 +71,7 @@
       </section>
       <section class="section3">
         <h2 class="title">橫丁商圈</h2>
-        <p class="intro">讓我們一同前往小巷盡頭的另一個世界——萬眾矚目的橫丁吧！</p>
+        <p class="subtitle">讓我們一同前往小巷盡頭的另一個世界——萬眾矚目的橫丁吧！</p>
         <div class="container">
           <div class="card" v-for="yoko in yokos"><img :src="yoko.img_src" alt=""/>
             <div class="text_area">
@@ -83,7 +83,7 @@
       </section>
       <section_2 class="section3_2">
         <h2 class="title">橫丁商圈</h2>
-        <div class="intro">讓我們一同前往小巷盡頭的另一個世界<br/>萬眾矚目的橫丁吧！</div>
+        <p class="subtitle">讓我們一同前往小巷盡頭的另一個世界<br/>萬眾矚目的橫丁吧！</p>
         <div class="container">
           <div class="swiper-container" id="yoko">
             <div class="swiper-wrapper">
@@ -99,7 +99,7 @@
       </section_2>
       <section class="section4">
         <h2 class="title">古蹟巡禮</h2>
-        <div class="intro">難得來到東京一趟，您絕對不能錯過這些名勝古蹟！</div>
+        <div class="subtitle">難得來到東京一趟，您絕對不能錯過這些名勝古蹟！</div>
         <div class="swiper-container" id="history1">
           <div class="swiper-wrapper">
             <div class="swiper-slide"><img class="bg bg1" src="img/04_history/history1.jpg" alt=""/>
@@ -134,7 +134,7 @@
       </section>
       <section class="section4_2">
         <h2 class="title">古蹟巡禮</h2>
-        <div class="intro">難得來到東京一趟，您絕對不能錯過這些名勝古蹟！</div>
+        <div class="subtitle">難得來到東京一趟，您絕對不能錯過這些名勝古蹟！</div>
         <div class="swiper-container" id="history2">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -174,7 +174,7 @@
       </section>
       <section class="section5">
         <h2 class="title">日本必吃-拉麵比拚</h2>
-        <div class="intro">東京拉麵一般按照味道或店名來分類。將為您介紹東京都內三大特色拉麵聚集地!!</div>
+        <div class="subtitle">東京拉麵一般按照味道或店名來分類。將為您介紹東京都內三大特色拉麵聚集地!!</div>
         <div class="container">
           <div class="card" v-for="ramen in ramens" data-aos="flip-left" data-aos-duration="800"><img class="img" :src="ramen.img_src" alt=""/>
             <div class="subtitle">{{ramen.name}}</div>
@@ -184,7 +184,7 @@
       </section>
       <section class="section6">
         <h2 class="title">洋和菓子-甜點對決</h2>
-        <div class="intro">老字號的傳統和菓子以及世界級的洋菓子，東京獨家美味甜點任君挑選。</div>
+        <div class="subtitle">老字號的傳統和菓子以及世界級的洋菓子，東京獨家美味甜點任君挑選。</div>
         <div class="container">
           <div class="col-xl" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out-back"> 
             <div class="row">
@@ -260,7 +260,7 @@
       </section>
       <section class="section7">
         <h2 class="title">日本情懷-鄉土料理</h2>
-        <div class="intro">在此為您介紹江戶前壽司、蕎麥麵、東京的下町美食，以及能夠感受到江戶歷史的特產。</div>
+        <div class="subtitle">在此為您介紹江戶前壽司、蕎麥麵、東京的下町美食，以及能夠感受到江戶歷史的特產。</div>
         <div class="row" v-for="trad in trads">
           <div class="img_area">
             <div class="trad swiper-container">
@@ -281,7 +281,7 @@
       </section>
       <section class="section8">
         <h2 class="title">親身體驗，發現東京魅力</h2>
-        <div class="intro">東京有許多能夠參觀、製作並玩樂的體驗型景點，您可接觸到充滿江戶韻味的傳統工藝世界。</div>
+        <div class="subtitle">東京有許多能夠參觀、製作並玩樂的體驗型景點，您可接觸到充滿江戶韻味的傳統工藝世界。</div>
         <div class="container">
           <div class="full" v-for="event in events">
             <div class="text_area">

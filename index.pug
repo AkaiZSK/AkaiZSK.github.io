@@ -68,7 +68,7 @@ html(lang="en")
             
             section.section2
                 h2.title 節慶祭典
-                .intro 為您介紹東京都內舉辦的幾個大型祭典，
+                .subtitle 為您介紹東京都內舉辦的幾個大型祭典，
                     br
                     | 還在安排時間的您不妨參考。
                 .container
@@ -86,7 +86,7 @@ html(lang="en")
 
             section.section3
                 h2.title 橫丁商圈
-                p.intro 讓我們一同前往小巷盡頭的另一個世界——萬眾矚目的橫丁吧！
+                p.subtitle 讓我們一同前往小巷盡頭的另一個世界——萬眾矚目的橫丁吧！
                 .container
                     .card(v-for="yoko in yokos")
                         img(:src="yoko.img_src", alt="")
@@ -96,7 +96,7 @@ html(lang="en")
 
             section_2.section3_2
                 h2.title 橫丁商圈
-                .intro 讓我們一同前往小巷盡頭的另一個世界
+                p.subtitle 讓我們一同前往小巷盡頭的另一個世界
                     br
                     | 萬眾矚目的橫丁吧！
                 .container
@@ -110,7 +110,7 @@ html(lang="en")
                         
             section.section4
                 h2.title 古蹟巡禮
-                .intro 難得來到東京一趟，您絕對不能錯過這些名勝古蹟！
+                .subtitle 難得來到東京一趟，您絕對不能錯過這些名勝古蹟！
                 #history1.swiper-container
                     .swiper-wrapper
                         .swiper-slide
@@ -147,7 +147,7 @@ html(lang="en")
 
             section.section4_2
                 h2.title 古蹟巡禮
-                .intro 難得來到東京一趟，您絕對不能錯過這些名勝古蹟！
+                .subtitle 難得來到東京一趟，您絕對不能錯過這些名勝古蹟！
                 #history2.swiper-container
                     .swiper-wrapper
                         .swiper-slide
@@ -183,7 +183,7 @@ html(lang="en")
 
             section.section5
                 h2.title 日本必吃-拉麵比拚
-                .intro 東京拉麵一般按照味道或店名來分類。將為您介紹東京都內三大特色拉麵聚集地!!
+                .subtitle 東京拉麵一般按照味道或店名來分類。將為您介紹東京都內三大特色拉麵聚集地!!
                 .container
                     .card(v-for="ramen in ramens",data-aos="flip-left",data-aos-duration="800")
                         img.img(:src="ramen.img_src", alt="")
@@ -195,7 +195,7 @@ html(lang="en")
                 img.bottom(src="img/09-deco/city.svg", alt="")
             section.section6
                 h2.title 洋和菓子-甜點對決
-                .intro 老字號的傳統和菓子以及世界級的洋菓子，東京獨家美味甜點任君挑選。
+                .subtitle 老字號的傳統和菓子以及世界級的洋菓子，東京獨家美味甜點任君挑選。
                 .container
                     .col-xl(data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out-back") 
                         .row
@@ -257,7 +257,7 @@ html(lang="en")
                 
             section.section7
                 h2.title 日本情懷-鄉土料理
-                .intro 在此為您介紹江戶前壽司、蕎麥麵、東京的下町美食，以及能夠感受到江戶歷史的特產。
+                .subtitle 在此為您介紹江戶前壽司、蕎麥麵、東京的下町美食，以及能夠感受到江戶歷史的特產。
                 .row(v-for="trad in trads")
                     .img_area
                         .trad.swiper-container
@@ -278,7 +278,7 @@ html(lang="en")
 
             section.section8
                 h2.title 親身體驗，發現東京魅力
-                .intro 東京有許多能夠參觀、製作並玩樂的體驗型景點，您可接觸到充滿江戶韻味的傳統工藝世界。
+                .subtitle 東京有許多能夠參觀、製作並玩樂的體驗型景點，您可接觸到充滿江戶韻味的傳統工藝世界。
                 .container
                     .full(v-for="event in events")
                         .text_area
