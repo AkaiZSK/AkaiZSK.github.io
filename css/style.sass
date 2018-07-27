@@ -41,6 +41,7 @@ section
     display: flex
     flex-direction: column
     align-items: center
+    overflow-x: hidden
 .title
     +font-title
     margin: 0
@@ -59,9 +60,11 @@ nav
     position: absolute
     top: 20px
     width: 100%
+    max-width: 100vw
     transition: .5s
     z-index: 99
-    padding: 12px
+    padding: 12px 0
+
     a
         color: $white
         +font-min
@@ -103,6 +106,18 @@ nav
     position: fixed
     z-index: 80
     transition: .3s
+    span 
+        color: $red
+    ul 
+        list-style: none
+        display: flex
+        flex-direction: column
+        margin: 20px 20px
+        padding: 0
+    li 
+        margin-left: 0px
+        position: relative
+        padding: 10px
     a
         color: $white
         +font-min
@@ -147,6 +162,7 @@ nav
     background-size: 110%
     background-repeat: no-repeat
     background-position: center
+    
 
     .container
         flex-direction: column
@@ -157,7 +173,7 @@ nav
         flex-direction: column
         align-items: flex-end
         margin-top: 15%
-        margin-bottom: 8%
+        margin-bottom: 18%
 
     .title_img  
         padding-right: 160px
@@ -251,7 +267,9 @@ nav
                     left: -37px
     .bottom
         width: 100%
-        margin-bottom: -10px
+        // margin-bottom: -10px
+        box-shadow: 0 60px 80px #233249
+        
     .phone
         display: none
 .section3
